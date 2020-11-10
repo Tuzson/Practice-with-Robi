@@ -19,9 +19,9 @@ public class Reader {
         while (sc.hasNextLine()){
             String line = sc.nextLine();
             String[] parts = line.split(",");
+            String name = parts[0] + " " + parts[1];
             Person person = new Person(
-                    parts[0],
-                    parts[1],
+                    name,
                     parts[2],
                     parts[3],
                     parts[4],
@@ -33,10 +33,11 @@ public class Reader {
                     parts[10],
                     parts[11]
             );
+
             persons.add(person);
         }
         for (int i = 0; i < persons.size(); i++) {
-            System.out.println(persons.get(i).getFirstName() + " " + persons.get(i).getLastName() + " " + persons.get(i).getCompanyName() + " " + persons.get(i).getAddress() + " " + persons.get(i).getCity() + " " + persons.get(i).getCountry() + " " + persons.get(i).getState() + " " + persons.get(i).getZip() + " " + persons.get(i).getPhone1() + " " + persons.get(i).getPhone2() + " " + persons.get(i).getEmail() + " " + persons.get(i).getWeb());
+            System.out.println(persons.get(i).getName() + " " + persons.get(i).getCompanyName() + " " + persons.get(i).getAddress() + " " + persons.get(i).getCity() + " " + persons.get(i).getCountry() + " " + persons.get(i).getState() + " " + persons.get(i).getZip() + " " + persons.get(i).getPhone1() + " " + persons.get(i).getPhone2() + " " + persons.get(i).getEmail() + " " + persons.get(i).getWeb());
         }
     }
 }
