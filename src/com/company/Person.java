@@ -1,8 +1,7 @@
 package com.company;
 
 public class Person {
-    private String firstName;
-    private String lastName;
+    private String name;
     private String companyName;
     private String address;
     private String city;
@@ -14,9 +13,8 @@ public class Person {
     private String email;
     private String web;
 
-    public Person(String firstName, String lastName, String companyName, String address, String city, String country, String state, int zip, String phone1, String phone2, String email, String web) {
-        this.firstName = firstName;
-        this.lastName = lastName;
+    public Person(String name, String companyName, String address, String city, String country, String state, int zip, String phone1, String phone2, String email, String web) {
+        this.name = name;
         this.companyName = companyName;
         this.address = address;
         this.city = city;
@@ -29,20 +27,13 @@ public class Person {
         this.web = web;
     }
 
-    public String getFirstName() {
-        return firstName;
+
+    public String getName() {
+        return name;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getCompanyName() {
